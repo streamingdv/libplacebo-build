@@ -54,7 +54,7 @@ jobs:
       - name: Build libplacebo
         working-directory: ./libplacebo
         run: |
-          meson setup build --buildtype release -Ddemos=false -Dprefix=$PWD/install
+          meson setup build --buildtype release --default-library=static -Ddemos=false -Dprefix=$PWD/install
           meson compile -vC build
           meson install -C build
 
