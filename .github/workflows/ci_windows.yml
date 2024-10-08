@@ -59,7 +59,7 @@ jobs:
           meson install -C build
 
       - name: Upload Artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: windows-library-artifacts-${{ matrix.arch }}
           path: libplacebo/install

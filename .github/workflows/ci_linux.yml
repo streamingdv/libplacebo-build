@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
 
     container:
-      image: ubuntu:latest
+      image: ubuntu:22.04
 
     steps:
       - name: Install Git
@@ -44,7 +44,7 @@ jobs:
           meson install -C build
 
       - name: Upload Artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: linux-library-artifacts
           path: libplacebo/install
